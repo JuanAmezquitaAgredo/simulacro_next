@@ -14,3 +14,5 @@ const InputComponent = ({id, type, value, onChange, disabled, required }: InputP
         />
     );
 };
+
+export default InputComponent;
