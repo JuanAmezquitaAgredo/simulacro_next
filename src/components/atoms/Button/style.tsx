@@ -8,10 +8,15 @@ const Button = styled.button<{ background?: string }>`
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    
+    text-transform: uppercase;  // Pone el texto en mayúsculas
+
     &:disabled {
         background-color: gray;
         cursor: not-allowed;
+    }
+
+    &:hover {
+        background-color: ${({ background }) => background ? "darkblue" : "darkgray"};
     }
 `;
 
