@@ -1,6 +1,6 @@
 import { useState } from "react";
-import ButtonComponent from "@/components/atoms/Button/Button";
-import InputComponent from "@/components/atoms/Input/Input";
+import ButtonComponent from "@/components/UI/Button/Button";
+import InputComponent from "@/components/UI/Input/Input";
 
 interface FormLoginComponentProps {
     onSignIn: (email: string, password: string) => void;

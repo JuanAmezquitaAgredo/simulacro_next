@@ -1,5 +1,6 @@
 'use client'
 import { SessionProvider } from "next-auth/react";
+import { ProviderRedux } from "./providerRedux";
 
 export default function RootLayout({
   children,
@@ -9,7 +10,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <SessionProvider>{children}</SessionProvider>
+        <ProviderRedux>
+          <SessionProvider>{children}</SessionProvider>
+        </ProviderRedux>
       </body>
     </html>
   );

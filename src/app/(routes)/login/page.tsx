@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { signIn, useSession } from "next-auth/react";
-import FormLoginComponent from "@/components/molecules/FormLogin/FormLogin";
+import FormLoginComponent from "@/components/FormLogin/FormLogin";
 
 
 interface User {

@@ -1,6 +1,9 @@
 'use client'
+
 import { signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import ProductsList from "@/components/ProductsList/ProductsList";
+
 
 export default function Home() {
 
@@ -10,7 +13,6 @@ export default function Home() {
   const handleSignOut = async () => {
     await signOut({ redirect: false });
     router.push("/login");
-     // redirect to login
   };
 
   return (
@@ -21,8 +23,10 @@ export default function Home() {
           <p>page</p>
           <p>{session.user.email}</p>
           <button onClick={handleSignOut}>Signout</button>
+          <div>
+            <ProductsList />
+          </div>
         </div>
-
       )}
     </div>
   );
