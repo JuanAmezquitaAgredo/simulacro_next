@@ -1,6 +1,12 @@
 import NextAuth from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
 
+interface User  {
+    name: string;
+    email: string;
+    tokenJWT: string;
+}
+
 const handler = NextAuth({
     providers: [
         CredentialsProvider({
@@ -24,7 +30,7 @@ const handler = NextAuth({
         error: "/login"
     },
     callbacks: {
-        async jwt({ token, user }) {
+        async jwt({ token, user }:{ token: any, user: User | any}        ) {
             if (user) {
                 token.name = user.name;
                 token.email = user.email;

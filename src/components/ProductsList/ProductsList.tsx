@@ -1,7 +1,7 @@
 'use client';
 
-import { fetchProducts } from '@/app/redux/productsSlice';
-import { AppDispatch, RootState } from '@/app/redux/store';
+import { fetchProducts } from '@/redux/productsSlice';
+import { AppDispatch, RootState } from '@/redux/store';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';

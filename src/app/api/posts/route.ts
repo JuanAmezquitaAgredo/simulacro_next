@@ -1,5 +1,5 @@
-import { NextRequest, NextResponse } from "next/server";
-export async function GET(request: NextRequest){
+import { NextResponse } from "next/server";
+export async function GET(){
 
     const res = await fetch('https://fakestoreapi.com/products', {
         headers: {
